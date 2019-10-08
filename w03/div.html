@@ -1,0 +1,91 @@
+OCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      #heading {
+        width: 100%;
+        height: 100px;
+        background-color: darkcyan;
+        text-align: center;
+      }
+      #menu {
+        width: 20%;
+        height: 400px;
+        background-color: darkturquoise;
+        float: left;
+      }
+      #section {
+        width: 80%;
+        height: 400px;
+        float: right;
+        background-color: rgb(152, 218, 230);
+      }
+      #footer {
+        width: 100%;
+        height: 70px;
+        background-color: darkgray;
+      }
+
+      .clearfix {
+        clear: both;
+      }
+      #heading nav li {
+        float: left;
+        list-style-type: none;
+        margin: 5px;
+        float: 15px;
+      }
+      #heading nav a {
+        background-color: darksalmon;
+        padding: 5px;
+      }
+      #heading nav a:hover {
+        background-color: crimson;
+      }
+      #heading u1 {
+        padding: 0px;
+      }
+    </style>
+    <script>
+      function changeColor(index) {
+        alert(index);
+        const p = document.getElementById("section");
+        console.log(p);
+        //if (index === 1) p.style.backgroundColor = "yellow";
+        //else if (index === 2) p.style.backgroundColor = "cornflowerblue";
+        //else if (index === 3) p.style.backgroundColor = "pink";
+        switch (index) {
+          case 1:
+            p.style.backgroundColor = "yellow";
+            break;
+          case 2:
+            p.style.backgroundColor = "cornflowerblue";
+            break;
+          case 3:
+            p.style.backgroundColor = "pink";
+            break;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="heading">
+      heading
+      <nav>
+        <u1>
+          <li onclick="changeColor(1)"><a href="#">link1</a></li>
+          <li onclick="changeColor(2)"><a href="#">link2</a></li>
+          <li onclick="changeColor(3)"><a href="#">link3</a></li>
+        </u1>
+      </nav>
+    </div>
+    <div id="menu">menu</div>
+    <div id="section">section</div>
+    <div class="clearfix"></div>
+    <div id="footer">footer</div>
+  </body>
+</html>
